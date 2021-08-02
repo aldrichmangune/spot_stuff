@@ -1,0 +1,22 @@
+{% extends 'chart/ch_base.html' %}
+{% block body %}
+<div class="container">
+
+<table class="table">
+    <thead>
+        <th>Playlist Name</th>
+        <th>Playlist Owner</th>
+        <th>Playlist Count</th>
+    </thead>
+    {% for playlist in playlists %}
+    <tr>
+        <td><a href="{% url 'chart:playlist_chart' playlist_id=playlist.pl_id %}">{{ playlist.pl_name }}</a></td>
+        <td>{{ playlist.pl_owner }}</td> 
+        <td>{{ playlist.pl_track_count }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</div>
+
+{% endblock body %}

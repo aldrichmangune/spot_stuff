@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cover Template · Bootstrap</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'cover.css' %}">
+    <link rel="stylesheet" href="{% static 'master.css' %}">
+</head>
+<body>
+<div class="container">
+  <div class="container inner">
+  <h3 class="masthead-brand"><a href="{% url 'index' %}">SpotStuff</a></h3>
+  <nav>
+    <ul class="nav masthead-nav">
+      {% comment %} <a class="nav-link active" href="#">Home</a> {% endcomment %}
+      <li><a class="nav-link" href="{% url 'admin:index' %}">Admin</a></li>
+      <li><a class="nav-link" href="{% url 'user_info:home' %}">User</a></li>
+    </ul>
+  </nav>
+  </div>
+
+  {% block body %}
+
+  {% endblock body %}
+</div>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

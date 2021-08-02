@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<div>
+ {% comment %} <h1>authentication demo</h1> {% endcomment %}
+
+ {% comment %} <p> {% endcomment %}
+   {% comment %} <ul> {% endcomment %}
+   {% if user and not user.is_anonymous %}
+     {% comment %} <li> {% endcomment %}
+       <a>Hello {{ user.get_full_name|default:user.username }}!</a>
+     {% comment %} </li> {% endcomment %}
+   {% else %}
+     {% comment %} <li> {% endcomment %}
+     <h1>Login to explore your playlists</h1>
+       <a href="{% url 'social:begin' 'spotify' %}?next={{ request.path }}" class="btn btn-lg btn-secondary">Login with Spotify</a>
+     {% comment %} </li> {% endcomment %}
+   {% endif %}
+   {% comment %} </ul> {% endcomment %}
+ {% comment %} </p> {% endcomment %}
+ </div>
+{% endblock body %}
