@@ -23,6 +23,12 @@ class HomeView(View):
 class PlaylistChartView(TemplateView):
     template_name = 'chart/playlist_chart.html'
     slug_url_kwarg = 'playlist_id'
+
+class GenreView(TemplateView): 
+    template_name = 'chart/genre.html'
+    print(user.username)
+    # genre_artists = cache.get(str(user.username) + '_playlist_tracks')
+    # print(genre_artists)
    
 class ChartData(APIView): 
     authentication_classes = [SessionAuthentication, BasicAuthentication] 

@@ -61,6 +61,11 @@
           },
           legend: {
             display: false
+          },
+          onClick: function (e) {
+            var activePointLabel = this.getElementsAtEvent(e)[0]._model.label;
+            if (!activePointLabel) return;
+            window.open( '{{request.path}}/' + activePointLabel.replace(/ /g,'_'), '_self')
           }
         }
       });

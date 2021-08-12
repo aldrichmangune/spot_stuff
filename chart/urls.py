@@ -9,5 +9,6 @@ urlpatterns = [
     # path('test-api', views.get_data), 
     path('api/', views.ChartData.as_view()),
     # path('playlists/', views.PlayListView.as_view(), name='playlists'),
-    path('<slug:playlist_id>', views.PlaylistChartView.as_view(), name='playlist_chart')
+    path('<slug:playlist_id>', views.PlaylistChartView.as_view(), name='playlist_chart'),
+    path('<slug:playlist_id>/<slug:genre>', views.GenreView.as_view())
 ] 

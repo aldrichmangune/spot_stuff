@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{% endblock head %}
+
+{% block body %}
+
+  
+<body class="container-fluid"> 
+  <center class="row" style="text-align:center"> 
+    <h1><b>{{genre}}</b></h1>
+    <h1>{{playlist_id}}
+  </center> 
+
+  {% for genre_artist in genre_artists %}
+    {{genre_artist}}
+  {% endfor %}
+  
+{% endblock body %}
