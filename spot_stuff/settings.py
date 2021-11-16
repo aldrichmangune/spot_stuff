@@ -173,4 +173,4 @@ REST_FRAMEWORK = {
     ]
 }
 
-django_heoku.settings(locals())
+django_heroku.settings(locals())
