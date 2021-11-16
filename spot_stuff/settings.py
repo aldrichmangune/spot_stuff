@@ -114,7 +114,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/user_info/playlists'
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/new-users-redirect-url/'
+SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/user_info/playlists'
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['playlist-read-private', 'user-library-read']
 # SOCIAL_AUTH_SPOTIFY_EXTRA_DATA = [('key', 'access_token')]
