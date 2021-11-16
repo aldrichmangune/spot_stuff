@@ -60,3 +60,5 @@ def playlists(request):
         
         return {'playlists':user_playlists}
     return {}
+
+# def genres(request):

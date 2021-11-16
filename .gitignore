@@ -24,6 +24,19 @@ media
 .idea/**/libraries 
 *.iws /out/ 
 
+# Project asset folders
+media/
+
+# Database
+db.sqlite3
+
+# Editor directories and files
+.idea
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
 # Python # 
 *.py[cod] 
 *$py.class 
@@ -46,6 +59,12 @@ wheels/
 *.egg 
 *.manifest 
 *.spec 
+
+.Python
+venv/
+env/
+*.sqlite3
+.idea/
 
 todo
 
