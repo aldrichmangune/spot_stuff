@@ -92,12 +92,19 @@ WSGI_APPLICATION = 'spot_stuff.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'ciba',
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'df14dgsv0f3qeo',
+        'USER': 'zilodapkkusoew',
+        'PASSWORD': '4bc2289b876efb2eb7a35845596004ce520ccecdb136d4301e8df56c5cc5e439',
+        'HOST': 'ec2-34-203-114-67.compute-1.amazonaws.com',
+        'PORT':  '5432',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Auth
 
@@ -157,9 +164,9 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage' 
+# STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage' 
 
 
 
