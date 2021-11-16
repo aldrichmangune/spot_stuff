@@ -32,7 +32,7 @@ SOCIAL_AUTH_SPOTIFY_KEY = '90be0e4d97bb4d7380a9bcaaf5dc0234'
 SOCIAL_AUTH_SPOTIFY_SECRET = '1c45f23e992d4f8b88f597147367f97b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'spot_stuff.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgresql-lively-81965',
+        'NAME': 'localspotdb',
         'USER': 'aldrich',
         'PASSWORD': '',
         'HOST': 'localhost',
