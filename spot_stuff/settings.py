@@ -93,17 +93,17 @@ WSGI_APPLICATION = 'spot_stuff.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'df14dgsv0f3qeo',
-        'USER': 'zilodapkkusoew',
-        'PASSWORD': '4bc2289b876efb2eb7a35845596004ce520ccecdb136d4301e8df56c5cc5e439',
-        'HOST': 'ec2-34-203-114-67.compute-1.amazonaws.com',
-        'PORT':  '5432',
+        'NAME': 'postgresql-lively-81965',
+        'USER': 'aldrich',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT':  '',
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
+db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
 # Auth
